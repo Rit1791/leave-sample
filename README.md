@@ -1,16 +1,28 @@
-# React + Vite
+# Leave Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple Leave Management System built with React.js.  
+It lets users apply for leaves, check their leave balance, and view all previous applications.  
+An admin can also log in to approve or reject leaves.
 
 Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Features
+- User and Admin login (mocked)
+- Apply for leave with date and reason
+- Leave balance tracking
+- Leave history with status (Pending / Approved / Rejected)
+- Admin panel to manage requests
+- Data stored using localStorage
 
-## React Compiler
+### Tech Used
+- React.js  
+- Tailwind CSS  
+- React Router  
+- React Hot Toast
+- Framer Motion
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### How to Run 
+1. git clone https://github.com/Rit1791/LeaveManagement.git
+2. cd LeaveManagement
+3. npm install
+4. npm run dev 
