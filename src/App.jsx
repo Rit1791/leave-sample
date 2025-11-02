@@ -5,20 +5,19 @@ import Dashboard from './Pages/DashboardPage';
 import AdminDashboard from './Pages/AdminDashboard';
 import {Toaster} from "react-hot-toast"
 
-/**
- * App - top-level router + shell
- */
+// App Component - Sets up all routes , setup toast notifications 
+  
 function App() {
   return (
     <>
-    <Toaster position="top-right" reverseOrder={false} />
+    <Toaster position="top-right" reverseOrder={false} /> 
     <BrowserRouter>    
-      <Routes>
+      <Routes> 
         <Route path="/" element={<LoginPage />} />
         <Route path="/dashboard" element={<Dashboard />} />
          <Route path="/admin" element={<AdminDashboard />} />
-        {/* fallback to / */}
-        <Route path="*" element={<Navigate to="/" replace />} />
+        {/* Redirects unknown routes to LoginPage */}
+        <Route path="*" element={<Navigate to="/" replace />} />  
       </Routes>
     </BrowserRouter>
     </>

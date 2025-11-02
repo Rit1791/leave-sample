@@ -12,10 +12,8 @@ import toast from 'react-hot-toast';
  
 
   useEffect(() => {
-    const existingLeaves = getLeaveHistory() || []; //It calls getLeaveHistory()  a helper function from your LeaveService.js
+    const existingLeaves = getLeaveHistory() || []; 
     setLeaves(existingLeaves);
-
-    
   }, []);
 
   const handleStatusChange = (id, status) => { // Triggered from LeaveHistory component on Approve or Reject
@@ -29,17 +27,19 @@ import toast from 'react-hot-toast';
   return (
     <>
       <Navbar />
+
       {/* Main admin dashboard layout */}
       <div className="min-h-screen bg-gradient-to-l from-blue-700 via-indigo-800 to-purple-900  flex flex-col items-center p-8">
         <div className="w-full max-w-5xl bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl p-8">
           <h2 className="text-2xl font-extrabold text-white text-center mb-6 drop-shadow-md">Admin Dashboard</h2>
           <p className="text-center text-gray-300 mb-10 text-sm tracking-wide">Manage and review employee leave requests below</p>
+
             {/* Leave record section */}
-          <div className="bg-white/5 border border-white/10 rounded-xl p-4 shadow-inner hover:shadow-lg transition-all ">
           <div className="flex flex-row justify-between">
             <h3 className="text-2xl font-bold text-gray-100 mb-2 border-b border-white/30 inline-block pb-2">
               Employee Leave Records
             </h3>
+
             {/* clear button */}
             <button 
             onClick={() => { 
@@ -50,14 +50,13 @@ import toast from 'react-hot-toast';
                Clear All Leave History
             </button>
           </div>
+
            {/* Leave history table component */}
             <LeaveHistory
               leaves={leaves}
               onStatusChange={handleStatusChange}
               isAdmin={true} 
             />
-          </div>
-
         </div>
         <Footer></Footer>
       </div>

@@ -1,29 +1,20 @@
-/**
- *  Returns all stored leaves from localStorage
- * @returns {Array} Array of leave objects
- */
+// storing, retrieving, and clearing leave data using the localStorage
+
+// get leaves from local storage
 export const getLeaveHistory = () => {
-  const leaves = localStorage.getItem('leaves');   // Reads the string value stored under the key 'leaves' from the browser’s localStorage.
+  const leaves = localStorage.getItem('leaves');   // get the stored leaves (if any)
   return leaves ? JSON.parse(leaves) : [];    // it parses the JSON string into a JavaScript array
 };
 
-
-/**
- * Saves a new leave request to localStorage
- * @param {Object} leave - The new leave data
- * @returns {Array} Updated list of leaves
- */
+// save a new leave request
 export const saveLeave = (leave) => {
-  const leaves = getLeaveHistory();    // Calls the function above to read the current list of leaves from localStorage (returns [] if none)
-  const updatedLeaves = [...leaves, leave ]; 
+  const leaves = getLeaveHistory();    // Calls the function above function to read the current list of leaves from localStorage (returns [] if none)
+  const updatedLeaves = [...leaves, leave ];  
   localStorage.setItem('leaves', JSON.stringify(updatedLeaves));   // Converts the updated array to a JSON string
   return updatedLeaves;  
 };
 
-
-/**
- * Clears all leaves 
- */
+// clear all leave data
 export const clearLeaves = () => {
   localStorage.removeItem('leaves'); 
 };
