@@ -22,7 +22,7 @@ Currently, two official plugins are available:
 - Framer Motion
 
 ### How to Run 
-1. git clone https://github.com/Rit1791/LeaveManagement.git
-2. cd LeaveManagement
+1. git clone https://github.com/Rit1791/leave-management-penthara
+2. cd leave-management-penthara
 3. npm install
 4. npm run dev 
