@@ -26,7 +26,7 @@ function LeaveBalance({setLeaves , MAX_LEAVES} ) {
   return (
     <div>
           {/* Leave Balance Section */}
-          <div className={` bg-gradient-to-br from-indigo-700 via-purple-700 to-blue-700 border ${leaveBalance === 0 ? 'border-red-500/60 shadow-red-400/40' : 'border-white/20 hover:shadow-blue-400/40'} rounded-xl p-4 text-center shadow-md w-fit mx-auto mb-6 hover:scale-105 transition-all`}>
+          <div className={` bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 border ${leaveBalance === 0 ? 'border-red-500/60 shadow-red-400/40' : 'border-white/20 hover:shadow-blue-400/40'} rounded-xl p-4 text-center shadow-md w-fit mx-auto mb-6 hover:scale-105 transition-all`}>
 
             <p className={`text-lg font-medium mb-3 ${leaveBalance === 0 ? 'text-red-300' : 'text-blue-100'}`}>
               Leave Balance:{" "}
